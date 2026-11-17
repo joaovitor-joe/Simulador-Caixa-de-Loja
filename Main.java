@@ -13,11 +13,25 @@ public class Main {
         double totalCompra = 0.0;
         String resumoCompra = "";
 
-        System.out.println("Quantos produtos diferentes você vai registrar? ");
+        System.out.print("Quantos produtos diferentes você vai registrar? ");
         int quantidadeProdutos = sc.nextInt();
 
         for (int i = 1; i <= quantidadeProdutos; i++) {
             sc.nextLine();
+
+            System.out.print("Digite o nome do produto: ");
+            String nomeProduto = sc.nextLine();
+
+            System.out.print("Digite o preço unitário: ");
+            double precoUnitario = sc.nextDouble();
+
+            System.out.print("Quantidade comprada: ");
+            int quantidade = sc.nextInt();
+
+            double subTotal = precoUnitario * quantidade;
+            totalCompra += subTotal;
+
+            resumoCompra += "Item: " + nomeProduto + " | Quantidade: " + quantidade + " | Subtotal: R$ " + subTotal + "\n";
         }
 
         System.out.println();

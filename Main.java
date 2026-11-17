@@ -13,6 +13,13 @@ public class Main {
         double totalCompra = 0.0;
         String resumoCompra = "";
 
+        System.out.println("Quantos produtos diferentes você vai registrar? ");
+        int quantidadeProdutos = sc.nextInt();
+
+        for (int i = 1; i <= quantidadeProdutos; i++) {
+            sc.nextLine();
+        }
+
         System.out.println();
 
         sc.close();

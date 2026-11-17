@@ -34,7 +34,16 @@ public class Main {
             resumoCompra += "Item: " + nomeProduto + " | Quantidade: " + quantidade + " | Subtotal: R$ " + subTotal + "\n";
         }
 
-        System.out.println();
+        System.out.println(resumoCompra);
+
+        System.out.printf("Valor da compra: R$ %.2f%n", totalCompra);
+
+        if (totalCompra > 100.0) {
+            double valorComDesconto = totalCompra * 0.90;
+            System.out.printf("Valor da compra com desconto: R$ %.2f%n", valorComDesconto);
+        } else {
+            System.out.printf("A compra no valor de R$ %.2f não teve desconto pois o valor não se encaixa para o desconto", totalCompra);
+        }
 
         sc.close();
     }
